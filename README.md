@@ -29,25 +29,6 @@ Authentication: JWT
 
 ---
 
-## 📁 Project Structure
-task-management-system/
-│── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── db.js
-│   └── server.js
-│
-│── frontend/
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│
-└── README.md
-
----
-
 ## ⚙️ Setup Instructions
 
 ### Clone repository
