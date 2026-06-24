@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- MOBILE NAVBAR -->
+
+<div class="mobile-navbar">
+
+  <h2>TaskFlow</h2>
+
+  <button onclick="toggleMobileMenu()">
+    ☰
+  </button>
+
+</div>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <button onclick="showAllTasks()">
+    My Tasks
+  </button>
+
+  <button onclick="showCompletedTasks()">
+    Completed Tasks
+  </button>
+
+  <button onclick="showPendingTasks()">
+    Pending Tasks
+  </button>
+
+  <button onclick="logout()">
+    Logout
+  </button>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div>
+    <h2 class="logo">TaskFlow</h2>
+    <div class="profile-box">
+      <div class="profile-circle" id="profileLetter">U</div>
+      <div>
+        <p class="welcome-text">Welcome</p>
+        <h3 id="profileName">User</h3>
+      </div>
+    </div>
+
+    <div class="menu-buttons">
+      <button onclick="showAllTasks()">My Tasks</button>
+      <button onclick="showCompletedTasks()">Completed Tasks</button>
+      <button onclick="showPendingTasks()">Pending Tasks</button>
+    </div>
+  </div>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <div class="topbar">
+
+    <!-- STATS CARDS -->
+    <div class="stats-container">
+      <div class="stats-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+      </div>
+      
+      <div class="stats-card completed-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+      </div>
+      
+      <div class="stats-card pending-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+      </div>
+    </div>
+
+    <button class="add-task-btn" onclick="toggleTaskForm()">+ Add Task</button>
+
+  </div>
+
+  <h1 class="task-heading">My Tasks</h1>
+    <!-- TASK FORM -->
+
+    <form id="taskForm" class="task-form hidden">
+
+      <input
+        type="text"
+        id="title"
+        placeholder="Task Title"
+        required
+      >
+
+      <input
+        type="text"
+        id="description"
+        placeholder="Description"
+        required
+      >
+
+      <select id="priority">
+
+        <option value="Low">Low</option>
+
+        <option value="Medium">Medium</option>
+
+        <option value="High">High</option>
+
+      </select>
+
+      <input type="date" id="dueDate" required>
+
+      <button type="submit">
+        Add Task
+      </button>
+
+    </form>
+
+    <!-- TASKS -->
+
+    <div id="taskContainer" class="task-grid"></div>
+
+  </div>
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>
