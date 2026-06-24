@@ -13,5 +13,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-
-console.log(process.env.MONGO_URI);
