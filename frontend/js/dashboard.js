@@ -36,7 +36,7 @@ async function fetchTasks() {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/tasks",
+      "https://task-management-system-o1r2.onrender.com/api/tasks",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -213,7 +213,7 @@ taskForm.addEventListener("submit", async (e) => {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/tasks",
+      "https://task-management-system-o1r2.onrender.com/api/tasks",
       {
         method: "POST",
 
@@ -263,7 +263,7 @@ async function deleteTask(id) {
   try {
 
     await fetch(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://task-management-system-o1r2.onrender.com/api/tasks/${id}`,
       {
         method: "DELETE",
 
@@ -289,7 +289,7 @@ async function toggleTask(id, completed) {
   try {
 
     await fetch(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://task-management-system-o1r2.onrender.com/api/tasks/${id}`,
       {
         method: "PUT",
 
@@ -331,7 +331,7 @@ async function updateTask(id) {
   try {
 
     await fetch(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://task-management-system-o1r2.onrender.com/api/tasks/${id}`,
       {
         method: "PUT",
 
